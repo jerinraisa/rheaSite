@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:wght@400,500,600,700,800&display=swap');
+
+.container {
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: black;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  padding: 150px 168px 115px;
+  color: white;
+  justify-content: space-around;
+  font-family: 'Open Sans', sans-serif;
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 50%;
+      max-height: 100%;
+
+      .title {
+        font-size: 30px;
+        font-weight: bold;
+        letter-spacing: 0.01px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+
+        > em {
+          color: #FFCCCB;
+          font-style: italic;
+        }
+      }
+
+      .descriptionText {
+        display: flex;
+        flex-direction: column;
+
+        .descriptionContent {
+            font-size: 18px;
+            width: 90%;
+            padding-bottom: 0;
+            margin-top: 0;
+            padding-top: 0;
+        }
+    }
+
+      .nextContent {
+        color: #FFCCCB;
+        bottom: 0;
+        width: max-content;
+
+        > em {
+          font-weight: bold;
+          font-style: normal;
+        }
+
+        &:hover {
+          border-bottom: 1px solid #FFCCCB;
+        }
+      }
+  }
+
+  @keyframes float-up {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(-20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(0px);
+    }
+  }
+
+  @keyframes float-down {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(-20px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+      transform: translatey(0px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+      transform: translatey(-20px);
+    }
+  }
+
+  .animation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+
+    .image1 {
+      width: min-content;
+      animation: float-up 6s ease-in-out infinite;
+    }
+    .image2 {
+      width: min-content;
+      padding-left: 65%;
+      animation: float-down 6s ease-in-out infinite;
+    }
+    .image3 {
+      width: min-content;
+      animation: float-up 6s ease-in-out infinite;
+    }
+    .image4 {
+      width: min-content;
+      padding-left: 65%;
+      animation: float-down 6s ease-in-out infinite;
+    }
+  }
+
+
+}
+
